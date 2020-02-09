@@ -38,7 +38,7 @@ fars_read <- function(filename) {
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
         data <- suppressMessages({
-                readr::read_csv(system.file("extdata", filename, package = "peergradedassignmentdocumentingcode", mustWork = TRUE), progress = FALSE)
+                readr::read_csv(filename, progress = FALSE)
         })
         dplyr::tbl_df(data)
 }
@@ -61,7 +61,10 @@ fars_read <- function(filename) {
 #' @export
 make_filename <- function(year) {
         year <- as.integer(year)
-        sprintf("accident_%d.csv.bz2", year)
+        system.file("extdata",
+                    sprintf("accident_%d.csv.bz2", year),
+                    package = "peergradedassignmentdocumentingcode",
+                    mustWork = TRUE)
 }
 
 

@@ -22,6 +22,7 @@
 #' file does not exists.
 #'
 #' @examples
+#' \dontrun{
 #' library(dplyr)
 #' library(readr)
 #' yr <- 2015
@@ -29,6 +30,7 @@
 #'   make_filename %>%
 #'   fars_read
 #' head(data)
+#' }
 #' @note To generate file name use: \code{\link{make_filename}}.
 #' @seealso \link{make_filename}
 #' @export
@@ -36,7 +38,7 @@ fars_read <- function(filename) {
         if(!file.exists(filename))
                 stop("file '", filename, "' does not exist")
         data <- suppressMessages({
-                readr::read_csv(filename, progress = FALSE)
+                readr::read_csv(system.file("extdata", filename, package = "peergradedassignmentdocumentingcode", mustWork = TRUE), progress = FALSE)
         })
         dplyr::tbl_df(data)
 }
@@ -115,8 +117,10 @@ fars_read_years <- function(years) {
 #'
 #' @seealso \link{fars_read_years}
 #' @examples
+#' \dontrun{
 #' plot(fars_summarize_years(2015))
 #' fars_summarize_years(c(2015, 2014))
+#' }
 #' @export
 fars_summarize_years <- function(years) {
         dat_list <- fars_read_years(years)

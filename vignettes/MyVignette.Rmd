@@ -17,7 +17,27 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(devtools)
-devtools::install_github("raggichr/peergradedassignmentdocumentingcode")
+# library(devtools)
+# devtools::install_github("raggichr/peergradedassignmentdocumentingcode")
 library(peergradedassignmentdocumentingcode)
 ```
+
+```{r example code}
+library(dplyr)
+library(readr)
+
+# ## basic example code
+# yr <- 2015
+# data <- yr %>%
+#     make_filename %>%
+#     fars_read
+# head(data)
+# 
+# fars_read_years("2013")
+# 
+# plot(fars_summarize_years(2015))
+# fars_summarize_years(c(2015, 2014))
+# 
+# fars_map_state(49, 2015)
+```
+

@@ -12,7 +12,9 @@ The goal of peergradedassignmentdocumentingcode is to ...
 You can install the released version of peergradedassignmentdocumentingcode from [CRAN](https://CRAN.R-project.org) with:
 
 ``` r
-install.packages("peergradedassignmentdocumentingcode")
+# library(devtools)
+# devtools::install_github("raggichr/peergradedassignmentdocumentingcode")
+library(peergradedassignmentdocumentingcode)
 ```
 
 ## Example
@@ -21,6 +23,21 @@ This is a basic example which shows you how to solve a common problem:
 
 ``` r
 library(peergradedassignmentdocumentingcode)
-## basic example code
+library(dplyr)
+library(readr)
+
+# ## basic example code
+# yr <- 2015
+# data <- yr %>%
+#     make_filename %>%
+#     fars_read
+# head(data)
+# 
+# fars_read_years("2013")
+# 
+# plot(fars_summarize_years(2015))
+# fars_summarize_years(c(2015, 2014))
+# 
+# fars_map_state(49, 2015)
 ```
 

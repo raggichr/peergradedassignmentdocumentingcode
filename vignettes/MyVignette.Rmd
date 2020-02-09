@@ -1,0 +1,21 @@
+---
+title: "MyVignette"
+author: "Christian Raggi"
+date: "2020-02-09"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{MyVignette}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(peergradedassignmentdocumentingcode)
+```

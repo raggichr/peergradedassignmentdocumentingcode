@@ -2,7 +2,7 @@
 # peergradedassignmentdocumentingcode
 
 <!-- badges: start -->
-[![Travis build status](https://travis-ci.org/raggichr/peergradedassignmentdocumentingcode.svg?branch=master)](https://travis-ci.org/raggichr/peergradedassignmentdocumentingcode)
+[![Build Status](https://travis-ci.org/raggichr/peergradedassignmentdocumentingcode.svg?branch=master)](https://travis-ci.org/raggichr/peergradedassignmentdocumentingcode)
 <!-- badges: end -->
 
 The goal of peergradedassignmentdocumentingcode is to ...
